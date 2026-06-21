@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram UI Clone</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            background:#ece7ef;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            min-height:100vh;
+        }
+
+        .container{
+            display:flex;
+            gap:40px;
+        }
+
+        .phone{
+            width:250px;
+            height:520px;
+            background:#fff;
+            border:8px solid #000;
+            border-radius:30px;
+            overflow:hidden;
+            display:flex;
+            flex-direction:column;
+        }
+
+        .top-bar{
+            height:30px;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+        }
+
+        .notch{
+            width:90px;
+            height:18px;
+            background:#000;
+            border-radius:20px;
+        }
+
+        .profile-header{
+            padding:12px;
+            flex:1;
+        }
+
+        .profile-info{
+            display:flex;
+            gap:10px;
+            align-items:center;
+        }
+
+        .avatar{
+            width:55px;
+            height:55px;
+            border-radius:50%;
+            background:#f7a7c4;
+        }
+
+        .profile-details{
+            flex:1;
+        }
+
+        .line{
+            height:8px;
+            background:#d9d9d9;
+            border-radius:5px;
+            margin:8px 0;
+        }
+
+        .long{
+            width:90%;
+        }
+
+        .medium{
+            width:70%;
+        }
+
+        .bio{
+            margin-top:10px;
+        }
+
+        .buttons{
+            display:flex;
+            gap:10px;
+            margin:15px 0;
+        }
+
+        .btn{
+            flex:1;
+            height:28px;
+            background:#efefef;
+            border-radius:6px;
+        }
+
+        .highlights{
+            display:flex;
+            justify-content:space-between;
+            margin-bottom:15px;
+        }
+
+        .highlight{
+            width:45px;
+            height:45px;
+            border-radius:50%;
+            background:linear-gradient(to right,#ffcfb3,#f58be3);
+        }
+
+        .tabs{
+            display:flex;
+            justify-content:space-around;
+            margin-bottom:10px;
+        }
+
+        .grid{
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            gap:3px;
+        }
+
+        .grid div{
+            height:80px;
+            background:linear-gradient(to bottom right,#ffd2b0,#ba6be0);
+        }
+
+        /* Screen 2 */
+
+        .stories{
+            display:flex;
+            gap:8px;
+            padding:10px;
+        }
+
+        .story{
+            width:45px;
+            height:45px;
+            border-radius:50%;
+            background:linear-gradient(to right,#ffcbb4,#ee7ae5);
+        }
+
+        .post{
+            flex:1;
+        }
+
+        .post-header{
+            height:40px;
+            margin:10px;
+            background:#f2f2f2;
+            border-radius:6px;
+        }
+
+        .post-image{
+            height:220px;
+            background:linear-gradient(to bottom,#ffb8d8,#f167dd);
+        }
+
+        .post-actions{
+            padding:10px;
+            display:flex;
+            gap:15px;
+            font-size:18px;
+        }
+
+        .short{
+            width:60%;
+            margin-left:10px;
+        }
+
+        /* Screen 3 */
+
+        .explore-grid{
+            flex:1;
+            display:grid;
+            grid-template-columns:repeat(3,1fr);
+            grid-auto-rows:100px;
+            gap:3px;
+            padding:8px;
+        }
+
+        .explore-grid div{
+            background:linear-gradient(to bottom right,#ffd5b6,#d06ce3);
+        }
+
+        .big{
+            grid-row:span 2;
+        }
+
+        .tall{
+            grid-column:span 2;
+        }
+
+        .bottom-nav{
+            height:50px;
+            border-top:1px solid #ddd;
+            display:flex;
+            justify-content:space-around;
+            align-items:center;
+            font-size:18px;
+        }
+    </style>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Screen 1 -->
+    <div class="phone">
+
+        <div class="top-bar">
+            <div class="notch"></div>
+        </div>
+
+        <div class="profile-header">
+
+            <div class="profile-info">
+                <div class="avatar"></div>
+
+                <div class="profile-details">
+                    <div class="line long"></div>
+                    <div class="line medium"></div>
+                </div>
+            </div>
+
+            <div class="bio">
+                <div class="line"></div>
+                <div class="line"></div>
+            </div>
+
+            <div class="buttons">
+                <div class="btn"></div>
+                <div class="btn"></div>
+                <div class="btn"></div>
+            </div>
+
+            <div class="highlights">
+                <div class="highlight"></div>
+                <div class="highlight"></div>
+                <div class="highlight"></div>
+                <div class="highlight"></div>
+            </div>
+
+            <div class="tabs">
+                <i class="fa-solid fa-table-cells"></i>
+                <i class="fa-regular fa-user"></i>
+            </div>
+
+            <div class="grid">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+        </div>
+
+        <div class="bottom-nav">
+            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-square-plus"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-user"></i>
+        </div>
+
+    </div>
+
+    <!-- Screen 2 -->
+
+    <div class="phone">
+
+        <div class="top-bar">
+            <div class="notch"></div>
+        </div>
+
+        <div class="stories">
+            <div class="story"></div>
+            <div class="story"></div>
+            <div class="story"></div>
+            <div class="story"></div>
+            <div class="story"></div>
+        </div>
+
+        <div class="post">
+            <div class="post-header"></div>
+
+            <div class="post-image"></div>
+
+            <div class="post-actions">
+                <i class="fa-regular fa-heart"></i>
+                <i class="fa-regular fa-comment"></i>
+                <i class="fa-regular fa-paper-plane"></i>
+            </div>
+
+            <div class="line"></div>
+            <div class="line short"></div>
+        </div>
+
+        <div class="bottom-nav">
+            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-square-plus"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-user"></i>
+        </div>
+
+    </div>
+
+    <!-- Screen 3 -->
+
+    <div class="phone">
+
+        <div class="top-bar">
+            <div class="notch"></div>
+        </div>
+
+        <div class="explore-grid">
+            <div></div>
+            <div></div>
+            <div class="big"></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div class="tall"></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <div class="bottom-nav">
+            <i class="fa-solid fa-house"></i>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-regular fa-square-plus"></i>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-user"></i>
+        </div>
+
+    </div>
+
+</div>
+
+</body>
+</html>
